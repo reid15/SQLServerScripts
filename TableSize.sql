@@ -1,53 +1,68 @@
 
-
 -- List all tables in a database 
 -- and order by size
 
-DBCC UPDATEUSAGE (0) -- Current DB
-go
+dbcc UPDATEUSAGE (0); -- Current DB
 
 create table Z_TableSize (
 TableName varchar(128) not null,
 CountOfRows int not null,
 Reserved varchar(200) not null,
-Data varchar(200) not null,
+[Data] varchar(200) not null,
 Index_Size varchar(200) not null,
 Unused varchar(200) not null
-)
+);
 go
 
-SET NOCOUNT ON
+create table Y_TableSize (
+SchemaName varchar(128) not null,
+TableName varchar(128) not null,
+[Data] varchar(200) not null,
+CountOfRows int not null
+);
+go
 
-DECLARE Diff_Cursor CURSOR
-   FOR 
+set nocount on;
 
-select [Name] AS TableName
-from sys.tables
-where [Name] not in ('sysdiagrams', 'Z_TableSize')
+declare Diff_Cursor cursor
+   for 
+
+select s.[Name] as SchemaName, t.[Name] as TableName
+from sys.tables as t
+join sys.schemas as s
+	on s.schema_id = t.schema_id
+where t.[Name] not in ('sysdiagrams', 'Z_TableSize');
 	
-DECLARE @TableName Nvarchar(128)
+declare @TableName nvarchar(128);
+declare @SchemaName nvarchar(128);
 
-OPEN Diff_Cursor
+open Diff_Cursor;
 
-FETCH NEXT FROM Diff_Cursor INTO @TableName
+fetch next from Diff_Cursor into @SchemaName, @TableName;
 
-WHILE @@FETCH_STATUS = 0
+while @@FETCH_STATUS = 0
 
-BEGIN
-	
-	insert Z_TableSize exec sp_spaceused @TableName
+begin
+	delete from Z_TableSize;
+	declare @FullTableName nvarchar(256) = @SchemaName + '.' + @TableName;
+	insert Z_TableSize exec sp_spaceused @FullTableName;
 
-	FETCH NEXT FROM Diff_Cursor INTO @TableName
-END
+	insert into Y_TableSize(SchemaName, TableName, [Data], CountOfRows)
+	select @SchemaName, @TableName, [Data], CountOfRows
+	from Z_TableSize;
 
-CLOSE Diff_Cursor
+	fetch next from Diff_Cursor into @SchemaName, @TableName;
+end
 
-DEALLOCATE Diff_Cursor
+close Diff_Cursor;
 
-select TableName, Data, CountOfRows
-from Z_TableSize
-order by cast((replace(Data, ' KB', '')) as int) desc
+deallocate Diff_Cursor;
 
-drop table Z_TableSize
+select SchemaName, TableName, [Data], CountOfRows
+from Y_TableSize
+order by cast((replace([Data], ' KB', '')) as int) desc;
+
+drop table Z_TableSize;
+drop table Y_TableSize;
 
 go
