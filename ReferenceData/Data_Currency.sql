@@ -1,0 +1,176 @@
+
+-- ISO currency types and codes
+-- ISO 4217
+
+if object_id('dbo.Currency') is not null
+	drop table dbo.Currency;
+go
+create table dbo.Currency(
+CurrencyCode char(3) not null primary key clustered,
+CurrencyDescription varchar(30) not null
+);
+go
+
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('AED', 'UAE Dirham');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('AFN', 'Afghani');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ALL', 'Lek');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('AMD', 'Armenian Dram');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ANG', 'Netherlands Antillian Guilder');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('AOA', 'Kwanza');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ARS', 'Argentine Peso');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('AUD', 'Australian Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('AWG', 'Aruban Guilder');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('AZN', 'Azerbaijanian Manat');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BAM', 'Convertible Marks');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BBD', 'Barbados Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BDT', 'Taka');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BGN', 'Bulgarian Lev');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BHD', 'Bahraini Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BIF', 'Burundi Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BMD', 'Bermudian Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BND', 'Brunei Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BOB', 'Boliviano');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BRL', 'Brazilian Real');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BSD', 'Bahamian Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BTN', 'Ngultrum');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BWP', 'Pula');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BYR', 'Belarussian Ruble');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('BZD', 'Belize Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CAD', 'Canadian Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CDF', 'Congolese Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CHF', 'Swiss Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CLP', 'Chilean Peso');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CNY', 'Yuan Renminbi');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('COP', 'Colombian Peso');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CRC', 'Costa Rican Colon');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CUP', 'Cuban Peso');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CVE', 'Cape Verde Escudo');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('CZK', 'Czech Koruna');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('DJF', 'Djibouti Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('DKK', 'Danish Krone');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('DOP', 'Dominican Peso');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('DZD', 'Algerian Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('EEK', 'Kroon');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('EGP', 'Egyptian Pound');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ERN', 'Nakfa');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ETB', 'Ethiopian Birr');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('EUR', 'Euro');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('FJD', 'Fiji Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('FKP', 'Falkland Islands Pound');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GBP', 'Pound Sterling');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GEL', 'Lari');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GHS', 'Cedi');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GIP', 'Gibraltar Pound');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GMD', 'Dalasi');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GNF', 'Guinea Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GTQ', 'Quetzal');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('GYD', 'Guyana Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('HKD', 'Hong Kong Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('HNL', 'Lempira');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('HRK', 'Croatian Kuna');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('HTG', 'Gourde');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('HUF', 'Forint');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('IDR', 'Rupiah');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ILS', 'New Israeli Sheqel');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('INR', 'Indian Rupee');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('IQD', 'Iraqi Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('IRR', 'Iranian Rial');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ISK', 'Iceland Krona');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('JMD', 'Jamaican Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('JOD', 'Jordanian Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('JPY', 'Yen');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KES', 'Kenyan Shilling');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KGS', 'Som');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KHR', 'Riel');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KMF', 'Comoro Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KPW', 'North Korean Won');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KRW', 'Won');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KWD', 'Kuwaiti Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KYD', 'Cayman Islands Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('KZT', 'Tenge');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LAK', 'Kip');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LBP', 'Lebanese Pound');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LKR', 'Sri Lanka Rupee');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LRD', 'Liberian Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LSL', 'Loti');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LTL', 'Lithuanian Litas');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LVL', 'Latvian Lats');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('LYD', 'Libyan Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MAD', 'Moroccan Dirham');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MDL', 'Moldovan Leu');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MGA', 'Malagasy Ariary');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MKD', 'Denar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MMK', 'Kyat');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MNT', 'Tugrik');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MOP', 'Pataca');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MRO', 'Ouguiya');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MUR', 'Mauritius Rupee');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MVR', 'Rufiyaa');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MWK', 'Kwacha');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MXN', 'Mexican Peso');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MYR', 'Malaysian Ringgit');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('MZN', 'Metical');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('NAD', 'Namibia Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('NGN', 'Naira');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('NIO', 'Cordoba Oro');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('NOK', 'Norwegian Krone');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('NPR', 'Nepalese Rupee');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('NZD', 'New Zealand Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('OMR', 'Rial Omani');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('PAB', 'Balboa');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('PEN', 'Nuevo Sol');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('PGK', 'Kina');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('PHP', 'Philippine Peso');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('PKR', 'Pakistan Rupee');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('PLN', 'Zloty');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('PYG', 'Guarani');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('QAR', 'Qatari Rial');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('RON', 'New Leu');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('RSD', 'Serbian Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('RUB', 'Russian Ruble');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('RWF', 'Rwanda Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SAR', 'Saudi Riyal');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SBD', 'Solomon Islands Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SCR', 'Seychelles Rupee');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SDG', 'Sudanese Pound');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SEK', 'Swedish Krona');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SGD', 'Singapore Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SHP', 'Saint Helena Pound');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SLL', 'Leone');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SOS', 'Somali Shilling');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SRD', 'Surinam Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('STD', 'Dobra');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SVC', 'El Salvador Colon');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SYP', 'Syrian Pound');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('SZL', 'Lilangeni');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('THB', 'Baht');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('TJS', 'Somoni');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('TND', 'Tunisian Dinar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('TOP', 'Pa''anga');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('TRY', 'Turkish Lira');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('TTD', 'Trinidad and Tobago Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('TWD', 'New Taiwan Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('TZS', 'Tanzanian Shilling');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('UAH', 'Hryvnia');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('UGX', 'Uganda Shilling');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('USD', 'US Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('UYU', 'Peso Uruguayo');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('UZS', 'Uzbekistan Sum');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('VEF', 'Bolivar Fuerte');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('VND', 'Dong');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('VUV', 'Vatu');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('WST', 'Tala');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('XAF', 'CFA Franc BEAC');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('XCD', 'East Caribbean Dollar');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('XOF', 'CFA Franc BCEAO');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('XPF', 'CFP Franc');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('YER', 'Yemeni Rial');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ZAR', 'Rand');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ZMK', 'Zambian Kwacha');
+insert into dbo.Currency(CurrencyCode, CurrencyDescription) values ('ZWD', 'Zimbabwe Dollar');
+
+go
+
+select * from dbo.Currency;
+
+go

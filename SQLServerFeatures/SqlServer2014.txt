@@ -1,0 +1,15 @@
+SQL Server 2014 - New Features
+1) Columnstore indexes
+	Updateable
+	Clustered
+2) In-memory OLTP - Hekaton
+3) New cardinality estimator
+	First change since 7.0
+4) Backups
+	Encrypted
+	Backup to Azure
+	SSMS to Azure Blob storage
+5) Delayed durability - lazy commit
+	For bottlenecks on log writes or contention waiting for release of locks
+	Possibility of data loss
+6) Inline index definition
