@@ -1,7 +1,7 @@
 
 -- SQL Server 2019
 
--- Table Veriable Deferred Compilation
+-- Table Variable Deferred Compilation
 -- Generate actual execution plan and compare between 2019 and an earlier version
 
 DECLARE @TableVariable as TABLE (ID int not null primary key);
