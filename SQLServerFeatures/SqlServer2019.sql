@@ -2,6 +2,8 @@
 -- SQL Server 2019
 
 -- Table Variable Deferred Compilation
+-- Instead of assuming each Table Variable only has one row, generate plan
+-- based on actual row count.
 -- Generate actual execution plan and compare between 2019 and an earlier version
 
 DECLARE @TableVariable as TABLE (ID int not null primary key);
@@ -13,6 +15,7 @@ FROM sys.objects;
 SELECT * FROM @TableVariable;
 
 -- APPROX_COUNT_DISTINCT
+-- Get a quick result for COUNT on a large table
 
 DROP TABLE IF EXISTS TestCount;
 CREATE TABLE TestCount (ID int not null);
@@ -31,6 +34,7 @@ SELECT COUNT(DISTINCT ID) FROM TestCount;
 SELECT APPROX_COUNT_DISTINCT(ID) FROM TestCount;
 
 -- SENSITIVITY CLASSIFICATION
+-- Metadata tag for columns that contain sensitive data (Like PII or financial data)
 
 DROP TABLE IF EXISTS dbo.TestClassification;
 
@@ -51,6 +55,8 @@ WITH (LABEL='Confidential', INFORMATION_TYPE='Credit Card');
 SELECT * FROM sys.sensitivity_classifications;
 
 -- UTF-8 Support
+-- Support UTF-8 text, but use less storage for ASCII characters.
+
 
 DROP TABLE IF EXISTS dbo.TestUTF;
 
@@ -73,17 +79,3 @@ FROM dbo.TestUTF;
 INSERT INTO dbo.TestUTF(FirstName) VALUES ('Bartholomew');
 
 GO
-
-
-
-
-
-
-
-
-
-
-
-
-
-
