@@ -1,0 +1,109 @@
+# Bulk Load roster records
+
+POST /search-roster/_bulk
+{ "index": {} }
+{"JerseyNo":0,"Player":"Lorenzo Carter","Position":"OLB","Experience":2018,"College":"Georgia","Acquired":"FA - 22 - NYG"}
+{ "index": {} }
+{"JerseyNo":1,"Player":"Jeff Okudah","Position":"CB","Experience":2020,"College":"Ohio State","Acquired":"TR w DET - 23"}
+{ "index": {} }
+{"JerseyNo":3,"Player":"Jessie Bates III","Position":"S","Experience":2018,"College":"Wake Forest","Acquired":"FA - 23 - CIN"}
+{ "index": {} }
+{"JerseyNo":4,"Player":"Taylor Heinicke","Position":"QB","Experience":2015,"College":"Old Dominion","Acquired":"FA - 23 - WAS"}
+{ "index": {} }
+{"JerseyNo":5,"Player":"Drake London","Position":"WR","Experience":2022,"College":"USC","Acquired":"Draft - 22 - 1R"}
+{ "index": {} }
+{"JerseyNo":6,"Player":"Younghoe Koo","Position":"K","Experience":2017,"College":"Georgia Southern","Acquired":"FA - 19 - NE"}
+{ "index": {} }
+{"JerseyNo":7,"Player":"Bijan Robinson","Position":"RB","Experience":2023,"College":"Texas","Acquired":"Draft - 23 - 1R"}
+{ "index": {} }
+{"JerseyNo":8,"Player":"Kyle Pitts","Position":"TE","Experience":2021,"College":"Florida","Acquired":"Draft - 21 - 1R"}
+{ "index": {} }
+{"JerseyNo":9,"Player":"Desmond Ridder","Position":"QB","Experience":2022,"College":"Cincinnati","Acquired":"Draft - 22 - 3R"}
+{ "index": {} }
+{"JerseyNo":11,"Player":"Logan Woodside","Position":"QB","Experience":2018,"College":"Toledo","Acquired":"PS - 22 - TEN"}
+{ "index": {} }
+{"JerseyNo":12,"Player":"KhaDarel Hodge","Position":"WR","Experience":2018,"College":"Prairie View A&M","Acquired":"FA - 22 - DET"}
+{ "index": {} }
+{"JerseyNo":13,"Player":"Bradley Pinion","Position":"P","Experience":2015,"College":"Clemson","Acquired":"FA - 22 - TAM"}
+{ "index": {} }
+{"JerseyNo":15,"Player":"Van Jefferson","Position":"WR","Experience":2020,"College":"Florida","Acquired":"TR w LAR - 23"}
+{ "index": {} }
+{"JerseyNo":16,"Player":"Scotty Miller","Position":"WR","Experience":2019,"College":"Bowling Green","Acquired":"FA - 23 - TAM"}
+{ "index": {} }
+{"JerseyNo":18,"Player":"Mack Hollins","Position":"WR","Experience":2017,"College":"North Carolina","Acquired":"FA - 23 - LV"}
+{ "index": {} }
+{"JerseyNo":20,"Player":"DeAundre 'Dee' Alford","Position":"CB","Experience":2022,"College":"Tusculum College","Acquired":"UFA - 22"}
+{ "index": {} }
+{"JerseyNo":21,"Player":"Mike Hughes","Position":"CB","Experience":2018,"College":"Central Florida","Acquired":"FA - 23 - DET"}
+{ "index": {} }
+{"JerseyNo":24,"Player":"A.J. Terrell","Position":"CB","Experience":2020,"College":"Clemson","Acquired":"Draft - 20 - 1R"}
+{ "index": {} }
+{"JerseyNo":25,"Player":"Tyler Allgeier","Position":"RB","Experience":2022,"College":"BYU","Acquired":"Draft - 22 - 5R"}
+{ "index": {} }
+{"JerseyNo":27,"Player":"Richie Grant","Position":"SS","Experience":2021,"College":"UCF","Acquired":"FA - 21 - LV"}
+{ "index": {} }
+{"JerseyNo":29,"Player":"Micah Abernathy","Position":"S","Experience":2019,"College":"Tennessee","Acquired":"FA - 22 - GB"}
+{ "index": {} }
+{"JerseyNo":33,"Player":"Tre Flowers","Position":"CB","Experience":2018,"College":"Oklahoma State","Acquired":"FA - 23 - CIN"}
+{ "index": {} }
+{"JerseyNo":34,"Player":"Clark Phillips III","Position":"CB","Experience":2023,"College":"Utah","Acquired":"Draft - 23 - 4R"}
+{ "index": {} }
+{"JerseyNo":37,"Player":"DeMarcco Hellams","Position":"DB","Experience":2023,"College":"Alabama","Acquired":"Draft - 23 - 7R"}
+{ "index": {} }
+{"JerseyNo":40,"Player":"Keith Smith","Position":"FB","Experience":2014,"College":"San Jose State","Acquired":"FA - 19 - OAK"}
+{ "index": {} }
+{"JerseyNo":47,"Player":"Arnold Ebiketie","Position":"OLB","Experience":2022,"College":"Penn State","Acquired":"Draft - 22 - 2R"}
+{ "index": {} }
+{"JerseyNo":48,"Player":"Bud Dupree","Position":"LB","Experience":2015,"College":"Kentucky","Acquired":"FA - 23 - TEN"}
+{ "index": {} }
+{"JerseyNo":49,"Player":"Liam McCullough","Position":"LS","Experience":2020,"College":"Ohio State","Acquired":"FA - 22 - LV"}
+{ "index": {} }
+{"JerseyNo":50,"Player":"Tae Davis","Position":"LB","Experience":2018,"College":"Tennessee-Chattanooga","Acquired":"FA - 23 - CLEV"}
+{ "index": {} }
+{"JerseyNo":51,"Player":"DeAngelo Malone","Position":"OLB","Experience":2022,"College":"Western Kentucky","Acquired":"Draft - 22 - 3R"}
+{ "index": {} }
+{"JerseyNo":53,"Player":"Nate Landman","Position":"ILB","Experience":2022,"College":"Colorado","Acquired":"UFA - 22"}
+{ "index": {} }
+{"JerseyNo":55,"Player":"Kaden Elliss","Position":"LB","Experience":2019,"College":"Idaho","Acquired":"FA - 23 - NO"}
+{ "index": {} }
+{"JerseyNo":56,"Player":"Jovaughn Gwyn","Position":"OL","Experience":2023,"College":"South Carolina","Acquired":"Draft - 23 - 7R"}
+{ "index": {} }
+{"JerseyNo":63,"Player":"Chris Lindstrom","Position":"RG","Experience":2019,"College":"Boston College","Acquired":"Draft - 19 - 1R"}
+{ "index": {} }
+{"JerseyNo":64,"Player":"Ryan Neuzil","Position":"OL","Experience":2021,"College":"Appalachian State","Acquired":"UFA - 21"}
+{ "index": {} }
+{"JerseyNo":65,"Player":"Matt Bergeron","Position":"OL","Experience":2023,"College":"Syracuse","Acquired":"Draft - 23 - 2R"}
+{ "index": {} }
+{"JerseyNo":67,"Player":"Drew Dalman","Position":"C","Experience":2021,"College":"Stanford","Acquired":"Draft - 21 - 4R"}
+{ "index": {} }
+{"JerseyNo":68,"Player":"Kyle Hinton","Position":"OL","Experience":2020,"College":"Washburn","Acquired":"FA - 23 - MIN"}
+{ "index": {} }
+{"JerseyNo":70,"Player":"Jake Matthews","Position":"LT","Experience":2014,"College":"Texas A&M","Acquired":"Draft - 14 - 1R"}
+{ "index": {} }
+{"JerseyNo":74,"Player":"Travis Bell","Position":"DL","Experience":2023,"College":"Kennesaw St","Acquired":"PS - CHI - 23"}
+{ "index": {} }
+{"JerseyNo":75,"Player":"Kentavius Street","Position":"DL","Experience":2018,"College":"NC State","Acquired":"TR w PHI - 23"}
+{ "index": {} }
+{"JerseyNo":76,"Player":"Kaleb McGary","Position":"RT","Experience":2019,"College":"Washington","Acquired":"Draft - 19 - 1R"}
+{ "index": {} }
+{"JerseyNo":77,"Player":"Storm Norton","Position":"OT","Experience":2017,"College":"Toledo","Acquired":"PS - 23 - NO"}
+{ "index": {} }
+{"JerseyNo":81,"Player":"Jonnu Smith","Position":"TE","Experience":2017,"College":"Florida International","Acquired":"TR w NE - 23"}
+{ "index": {} }
+{"JerseyNo":84,"Player":"Cordarrelle Patterson","Position":"RB","Experience":2013,"College":"Tennessee","Acquired":"FA - 21 - CHI"}
+{ "index": {} }
+{"JerseyNo":85,"Player":"MyCole Pruitt","Position":"TE","Experience":2015,"College":"Southern Illinois","Acquired":"FA - 22 - TEN"}
+{ "index": {} }
+{"JerseyNo":87,"Player":"John FitzPatrick","Position":"TE","Experience":2022,"College":"Georgia","Acquired":"Draft - 22 - 6R"}
+{ "index": {} }
+{"JerseyNo":90,"Player":"David Onyemata","Position":"DT","Experience":2016,"College":"Manitoba (CAN)","Acquired":"FA - 23 - NO"}
+{ "index": {} }
+{"JerseyNo":93,"Player":"Calais Campbell","Position":"DL","Experience":2008,"College":"Miami","Acquired":"FA - 23 - BAL"}
+{ "index": {} }
+{"JerseyNo":94,"Player":"Albert Huggins","Position":"DL","Experience":2019,"College":"Clemson","Acquired":"FA - 23 - NO"}
+{ "index": {} }
+{"JerseyNo":95,"Player":"Ta'Quon Graham","Position":"DL","Experience":2021,"College":"Texas","Acquired":"Draft - 21 - 5R"}
+{ "index": {} }
+{"JerseyNo":96,"Player":"Zach Harrison","Position":"DL","Experience":2023,"College":"Ohio St","Acquired":"Draft - 23 - 3R"}
+{ "index": {} }
+{"JerseyNo":99,"Player":"Joe Gaziano","Position":"DE","Experience":2020,"College":"Northwestern","Acquired":"FA - 23 - LAC"}
