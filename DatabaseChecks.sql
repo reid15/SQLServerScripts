@@ -47,6 +47,24 @@ JOIN sys.schemas as s
 WHERE c.[Name] like '%[0-9]%'
 	AND t.is_ms_shipped = 0;
 
+-- Brackets/Quotes in column names
+
+INSERT INTO #Issues(SchemaName, ObjectName, ObjectType, Issue)
+SELECT s.[Name] as SchemaName, t.[Name] + '.' +  c.[Name] as ColumnName, 'Column' as ObjectType, 'Bracket/Quote In Column Name' as Issue
+FROM sys.columns as c
+JOIN sys.tables as t
+	ON t.object_id = c.object_id
+JOIN sys.schemas as s
+	ON s.schema_id = t.schema_id
+WHERE t.is_ms_shipped = 0
+	AND (
+		c.[Name] like '%/[%' ESCAPE '/'
+		OR c.[Name] like '%/]%' ESCAPE '/'
+		OR c.[Name] like '%''%' 
+		OR c.[Name] like '%"%'
+	);
+
+
 -- Space in object name
 
 INSERT INTO #Issues(SchemaName, ObjectName, ObjectType, Issue)
@@ -67,6 +85,22 @@ JOIN sys.schemas as s
 WHERE o.[Name] like '%[0-9]%'
 	AND o.[Type] in ('U', 'V', 'P')
 	AND o.is_ms_shipped = 0;
+
+-- Brackets/Quotes in object name
+
+INSERT INTO #Issues(SchemaName, ObjectName, ObjectType, Issue)
+SELECT s.[Name] as SchemaName, o.[Name] as ObjectName, o.type_desc as ObjectType, 'Brackets/Quotes In Object Name' as Issue
+FROM sys.objects as o
+JOIN sys.schemas as s
+	ON s.schema_id = o.schema_id
+WHERE o.[Type] in ('U', 'V', 'P')
+	AND o.is_ms_shipped = 0
+	AND (
+		o.[Name] like '%/[%' ESCAPE '/'
+		OR o.[Name] like '%/]%' ESCAPE '/'
+		OR o.[Name] like '%''%' 
+		OR o.[Name] like '%"%'
+	);
 
 -- Disabled Foreign Key
 
