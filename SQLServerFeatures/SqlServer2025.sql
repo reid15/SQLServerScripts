@@ -168,3 +168,14 @@ FROM #ProductTest;
 GO
 
 ----------------------------------------------------------------------------------------------------------------------------
+-- Substring - Can omit length parameter to return the rest of the string 
+
+-- Before - You had to give the 3rd parameter for the length of the string to return
+
+SELECT SUBSTRING('Multi-Word Phrase', 12, 6); -- Returns 'Phrase'
+
+-- Now, 3rd parameter isn't needed if you want all of the string from the specified starting point
+
+SELECT SUBSTRING('Multi-Word Phrase', 12); -- Returns 'Phrase'
+
+----------------------------------------------------------------------------------------------------------------------------
