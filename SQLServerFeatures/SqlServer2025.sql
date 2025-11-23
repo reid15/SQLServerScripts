@@ -42,6 +42,11 @@ GO
 
 -- Fuzzy match -------------------------------------------------------------------------------------------------------------
 -- Return values specifying how similar two strings are to one another
+-- With release of SQL Server 2025, these features are considered as in preview
+-- Have to enable preview features
+
+ALTER DATABASE SCOPED CONFIGURATION SET PREVIEW_FEATURES = ON;
+GO
 
 SELECT EDIT_DISTANCE_SIMILARITY('Attitude', 'Attitude'); -- 100
 
@@ -177,5 +182,10 @@ SELECT SUBSTRING('Multi-Word Phrase', 12, 6); -- Returns 'Phrase'
 -- Now, 3rd parameter isn't needed if you want all of the string from the specified starting point
 
 SELECT SUBSTRING('Multi-Word Phrase', 12); -- Returns 'Phrase'
+
+----------------------------------------------------------------------------------------------------------------------------
+-- String concatenation - Can use || to combine strings
+
+SELECT 'Combined ' || 'Strings';
 
 ----------------------------------------------------------------------------------------------------------------------------
