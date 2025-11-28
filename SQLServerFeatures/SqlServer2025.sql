@@ -188,4 +188,8 @@ SELECT SUBSTRING('Multi-Word Phrase', 12); -- Returns 'Phrase'
 
 SELECT 'Combined ' || 'Strings';
 
+-- Concatenation with NULL yields NULL
+
+SELECT 'Combined ' || NULL;
+
 ----------------------------------------------------------------------------------------------------------------------------
