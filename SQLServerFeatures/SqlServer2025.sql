@@ -1,6 +1,6 @@
-
+﻿
 -- SQL Server 2025 - New T-SQL features
--- 2025 evaluation edition (17.0.700.9) - July 5, 2025
+-- 2025 RTM - Enterprise Developer edition (17.0.1000.7) - December 2025
 --
 -- SQL Rob - Blog post on new features
 -- https://sqlrob.wordpress.com/2025/07/03/sql-server-2025-new-t-sql-features-part-1
@@ -191,5 +191,12 @@ SELECT 'Combined ' || 'Strings';
 -- Concatenation with NULL yields NULL
 
 SELECT 'Combined ' || NULL;
+
+----------------------------------------------------------------------------------------------------------------------------
+-- UNISTR - Display characters from Unicode code - Including symbols and emojis
+
+SELECT UNISTR(N'\231B'); -- ⌛
+
+SELECT UNISTR(N'\+01F600'); -- 😀
 
 ----------------------------------------------------------------------------------------------------------------------------
