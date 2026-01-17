@@ -200,3 +200,23 @@ SELECT UNISTR(N'\231B'); -- ⌛
 SELECT UNISTR(N'\+01F600'); -- 😀
 
 ----------------------------------------------------------------------------------------------------------------------------
+-- CURRENT_DATE
+-- ANSI standard function to return the current date (date-only, without the time)
+
+SELECT CURRENT_DATE;
+
+----------------------------------------------------------------------------------------------------------------------------
+-- BASE64_ENCODE and BASE64_DECODE
+-- Encode and Decode a Varbinary value
+
+DECLARE @Value AS VARBINARY (100) = CAST('Test Phrase' AS VARBINARY (100));
+
+SELECT @Value AS BinaryValue;
+
+DECLARE @EncodedValue VARCHAR(100) = BASE64_ENCODE(@Value);
+
+SELECT @EncodedValue AS EncodedValue;
+
+SELECT BASE64_DECODE(@EncodedValue) AS DecodedValue;
+
+----------------------------------------------------------------------------------------------------------------------------
